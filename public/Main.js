@@ -10,6 +10,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1920,
     height: 1080,
+    backgroundColor: "#FFFFFF",
     // 여기가 바뀌었어요!
     // nodeJS API를 사용 가능하게하는 코드입니다.
     webPreferences: {
@@ -49,3 +50,30 @@ app.on("ready", createWindow);
 app.on("window-all-closed", () => {
   app.quit();
 });
+
+// hide
+// function createWindow () {
+//   win = new BrowserWindow({width: 1024, height: 768})
+//   win.loadURL('...')
+//   win.webContents.openDevTools()
+//   win.on('close', (event) => {
+//     if (app.quitting) {
+//       win = null
+//     } else {
+//       event.preventDefault()
+//       win.hide()
+//     }
+//   })
+// }
+
+// app.on('ready', createWindow)
+
+// app.on('window-all-closed', () => {
+//   if (process.platform !== 'darwin') {
+//     app.quit()
+//   }
+// })
+
+// app.on('activate', () => { win.show() })
+
+// app.on('before-quit', () => app.quitting = true)
