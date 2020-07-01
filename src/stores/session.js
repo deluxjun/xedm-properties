@@ -2,11 +2,8 @@
 import axios from "axios";
 import { observable, action } from "mobx";
 
-import helper from "utils/helper";
-import storage from "utils/storage";
-import { normalize } from "utils/emoji";
-import chat from "./chat";
-import contacts from "./contacts";
+import storage from "@utils/storage";
+import helper from "@utils/helper";
 
 const CancelToken = axios.CancelToken;
 
@@ -50,7 +47,7 @@ class Session {
   // get info
   async getInfo() {
     let info = {};
-    let response = await axios.get(axios.defaults.baseURL + "/json/info");
+    let response = await axios.get("/json/info");
     for (let field in response.data) {
       info[field] = response.data[field];
     }

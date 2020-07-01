@@ -10,6 +10,7 @@ import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
 import { Properties } from "./component/xedm-properties";
 import { Provider } from "mobx-react";
 import stores from "./stores";
+import helper from "./utils/helper";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -31,26 +32,19 @@ interface IStyle {
   width: number;
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
-  },
-}));
-
 export default class App extends React.Component {
-  classes = useStyles();
   state = { value: 0 };
 
   handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    this.setState(newValue);
+    this.setState({ value: newValue });
   };
 
   async componentWillMount() {
     if (window.navigator.onLine) {
       // TODO: init websocket server
       // TODO: hide window
+      // init log
+      helper.initLog(process.env.NODE_ENV !== "production");
       // check session and init
       await stores.session.init();
     }
@@ -60,7 +54,7 @@ export default class App extends React.Component {
     return (
       <Provider {...stores}>
         <BrowserRouter>
-          <div className={this.classes.root}>
+          <div>
             <AppBar position="static" color="default">
               <Tabs
                 value={value}
@@ -87,7 +81,13 @@ export default class App extends React.Component {
     );
   }
 }
-
+// const useStyles = makeStyles((theme: Theme) => ({
+//   root: {
+//     flexGrow: 1,
+//     backgroundColor: theme.palette.background.paper,
+//     width: 500,
+//   },
+// }));
 // export default function FullWidthTabs() {
 //   const classes = useStyles();
 //   const [value, setValue] = React.useState(0);

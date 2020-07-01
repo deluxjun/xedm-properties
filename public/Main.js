@@ -1,15 +1,21 @@
-const { app, BrowserWindow } = require("electron");
+// const { app, BrowserWindow } = require("electron");
+
+const electron = require("electron");
 const path = require("path");
 const url = require("url");
 const isDev = require("electron-is-dev");
+const os = require("os");
+
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
 function createWindow() {
   /*
    * 넓이 1920에 높이 1080의 FHD 풀스크린 앱을 실행시킵니다.
    * */
   const win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+    width: 1300,
+    height: 700,
     backgroundColor: "#FFFFFF",
     // 여기가 바뀌었어요!
     // nodeJS API를 사용 가능하게하는 코드입니다.
@@ -39,6 +45,15 @@ function createWindow() {
   if (isDev) {
     win.loadURL("http://localhost:3000");
     win.webContents.openDevTools();
+
+    // react extension
+    // BrowserWindow.addDevToolsExtension(
+    //   path.join(
+    //     os.homedir(),
+    //     "%LOCALAPPDATA%/Google/Chrome/User Data/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/4.7.0_0"
+    //   )
+    //   //  path.join(os.homedir(), '/Library/Application Support/Google/Chrome/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/4.3.0_0')
+    // );
   } else {
     win.loadFile(path.join(__dirname, "../build/index.html"));
   }
