@@ -1,10 +1,5 @@
-// import storage from 'electron-json-storage';
+import storage from "electron-json-storage";
 import helper from "./helper";
-
-let storage;
-if (helper.isElectron()) {
-  storage = require("electron-json-storage");
-}
 
 export default {
   get: (key) => {
@@ -46,3 +41,5 @@ export default {
     });
   },
 };
+
+// export default storageObj;

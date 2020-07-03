@@ -1,5 +1,3 @@
-// const { app, BrowserWindow } = require("electron");
-
 const electron = require("electron");
 const path = require("path");
 const url = require("url");
@@ -46,14 +44,19 @@ function createWindow() {
     win.loadURL("http://localhost:3000");
     win.webContents.openDevTools();
 
-    // react extension
-    // BrowserWindow.addDevToolsExtension(
-    //   path.join(
-    //     os.homedir(),
-    //     "%LOCALAPPDATA%/Google/Chrome/User Data/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/4.7.0_0"
-    //   )
-    //   //  path.join(os.homedir(), '/Library/Application Support/Google/Chrome/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/4.3.0_0')
-    // );
+    // Using require
+    const {
+      default: installExtension,
+      REACT_DEVELOPER_TOOLS,
+    } = require("electron-devtools-installer");
+
+    installExtension(REACT_DEVELOPER_TOOLS)
+      .then((name) => {
+        console.log(`Added Extension:  ${name}`);
+      })
+      .catch((err) => {
+        console.log("An error occurred: ", err);
+      });
   } else {
     win.loadFile(path.join(__dirname, "../build/index.html"));
   }

@@ -7,9 +7,9 @@ import Tab from "@material-ui/core/Tab";
 import { Paper } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
-import { Properties } from "./component/xedm-properties";
+import Properties from "./component/xedm-properties";
 import { Provider } from "mobx-react";
-import stores from "./stores";
+import { store } from "./stores";
 import helper from "./utils/helper";
 
 interface TabPanelProps {
@@ -46,38 +46,42 @@ export default class App extends React.Component {
       // init log
       helper.initLog(process.env.NODE_ENV !== "production");
       // check session and init
-      await stores.session.init();
+      await store.session.init();
+      await store.session.setAuth(
+        "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhODI2ODE3YWRkOWQ0MGE2YmFlNWYxY2IxOTg3OWQ4MCIsImlhdCI6MTU5Mzc0MDUwNiwic3ViIjoiIiwiaXNzIjoiMzc0MDI5IiwiZXhwIjoxNTkzNzQ3NzA2fQ.NAcPHaFW9_ujUX-WYaiGqlGrIjmlHtRVluq_OMl2cc0"
+      );
+      logger.info("session initialized");
     }
   }
   render() {
     const { value } = this.state;
     return (
-      <Provider {...stores}>
-        <BrowserRouter>
-          <div>
-            <AppBar position="static" color="default">
-              <Tabs
-                value={value}
-                onChange={this.handleChange}
-                aria-label="simple tabs example"
-              >
-                <Tab
-                  value={0}
-                  label="Properties"
-                  component={Link}
-                  to="/properties"
-                />
-                <Tab value={1} label="Item Two" component={Link} to="/two" />
-              </Tabs>
-            </AppBar>
+      // <Provider {...stores}>
+      <BrowserRouter>
+        <div>
+          <AppBar position="static" color="default">
+            <Tabs
+              value={value}
+              onChange={this.handleChange}
+              aria-label="simple tabs example"
+            >
+              <Tab
+                value={0}
+                label="Properties"
+                component={Link}
+                to="/properties"
+              />
+              <Tab value={1} label="Item Two" component={Link} to="/two" />
+            </Tabs>
+          </AppBar>
 
-            <Switch>
-              <Route path="/properties" component={PageShell(PropertiesItem)} />
-              {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
-            </Switch>
-          </div>
-        </BrowserRouter>
-      </Provider>
+          <Switch>
+            <Route path="/properties" component={PageShell(PropertiesItem)} />
+            {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
+          </Switch>
+        </div>
+      </BrowserRouter>
+      // </Provider>
     );
   }
 }

@@ -39,7 +39,7 @@ const CancelToken = axios.CancelToken;
 //   }
 // }
 
-class Session {
+export default class Session {
   @observable loading = true;
   @observable auth;
   @observable info;
@@ -52,7 +52,7 @@ class Session {
       info[field] = response.data[field];
     }
 
-    self.info = info && Object.keys(info).length ? info : void 0;
+    this.info = info && Object.keys(info).length ? info : void 0;
     console.log(info);
 
     return info;
@@ -65,18 +65,18 @@ class Session {
     if (contentType)
       axios.defaults.headers.common["Content-Type"] = contentType;
 
-    self.getInfo();
+    this.getInfo();
   }
 
   @action async setAuth(auth) {
     if (auth && Object.keys(auth).length) {
       storage.set("auth", auth);
-      self.auth = auth;
+      this.auth = auth;
 
       this.init();
 
-      if (self.auth) {
-        axios.defaults.headers.common["Authorization"] = `Bearer ${self.auth}`; // for all requests
+      if (this.auth) {
+        axios.defaults.headers.common["Authorization"] = `Bearer ${this.auth}`; // for all requests
       }
     }
 
@@ -84,5 +84,5 @@ class Session {
   }
 }
 
-const self = new Session();
-export default self;
+// const self = new Session();
+// export default self;

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { FC, ChangeEvent, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import TextField from "@material-ui/core/TextField";
+import { observer } from "mobx-react-lite";
+import { useStore } from "@stores";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -14,9 +16,15 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const Properties = () => {
+const Properties = observer(() => {
   const classes = useStyles();
-  const [value, setValue] = React.useState("Controlled");
+  const [value, setValue] = useState("Controlled");
+  const { docInfo } = useStore();
+
+  // called one time, when mount
+  useEffect(() => {
+    docInfo.getDocInfo("20200605175750te");
+  }, []);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -31,7 +39,7 @@ export const Properties = () => {
         <TextField
           id="standard-read-only-input"
           label="Name"
-          defaultValue="Hello World"
+          defaultValue={docInfo.info.object_name}
           InputProps={{
             readOnly: true,
           }}
@@ -115,4 +123,6 @@ export const Properties = () => {
       </div>
     </form>
   );
-};
+});
+
+export default Properties;

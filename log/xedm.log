@@ -1,13 +1,6 @@
-123[2020-07-01T16:40:11.992] [INFO] default - log4js has been initialized
-[2020-07-01T16:40:20.799] [INFO] default - log4js has been initialized
-[2020-07-01T16:40:27.902] [ERROR] default - error
-[2020-07-01T16:40:30.669] [DEBUG] default - hi
-[2020-07-01T16:40:36.990] [DEBUG] default - hi
-[2020-07-01T16:40:41.406] [INFO] default - info
-[2020-07-01T16:40:49.410] [ERROR] default - error
-[2020-07-01T16:40:58.917] [ERROR] default - error
-[2020-07-01T16:41:02.780] [INFO] default - info
-[2020-07-01T16:41:04.318] [INFO] default - info
-[2020-07-01T16:41:06.476] [ERROR] default - error
-[2020-07-01T16:41:07.992] [INFO] default - log4js has been initialized
-[2020-07-01T16:41:10.949] [ERROR] default - error
+[2020-07-03T10:32:51.380] [INFO] default - log4js has been initialized
+[2020-07-03T10:32:51.483] [INFO] default - session initialized
+[2020-07-03T10:33:24.143] [INFO] default - log4js has been initialized
+[2020-07-03T10:33:24.242] [INFO] default - session initialized
+[2020-07-03T10:42:33.206] [INFO] default - log4js has been initialized
+[2020-07-03T10:42:33.300] [INFO] default - session initialized

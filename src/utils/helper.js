@@ -9,7 +9,8 @@ const helper = {
         system: {
           type: "dateFile",
           filename: "log/xedm.log",
-          pattern: "-yyyy-MM-dd",
+          maxLogSize: 10 * 1024 * 1024,
+          backups: 5,
         },
       },
       categories: {
