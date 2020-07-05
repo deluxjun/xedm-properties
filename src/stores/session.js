@@ -2,8 +2,8 @@
 import axios from "axios";
 import { observable, action } from "mobx";
 
-import storage from "@utils/storage";
-import helper from "@utils/helper";
+import storage from "@/utils/storage";
+import helper from "@/utils/helper";
 
 const CancelToken = axios.CancelToken;
 

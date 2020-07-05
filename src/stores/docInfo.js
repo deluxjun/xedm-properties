@@ -2,7 +2,7 @@ import { observable, action } from "mobx";
 import axios from "axios";
 
 import session from "./session";
-import storage from "@utils/storage";
+import storage from "@/utils/storage";
 
 function get(url, params = "", withNoty = false) {
   return new Promise((resolve, reject) => {

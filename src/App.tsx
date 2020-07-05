@@ -50,7 +50,7 @@ export default class App extends React.Component {
       await store.session.setAuth(
         "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhODI2ODE3YWRkOWQ0MGE2YmFlNWYxY2IxOTg3OWQ4MCIsImlhdCI6MTU5Mzc0MDUwNiwic3ViIjoiIiwiaXNzIjoiMzc0MDI5IiwiZXhwIjoxNTkzNzQ3NzA2fQ.NAcPHaFW9_ujUX-WYaiGqlGrIjmlHtRVluq_OMl2cc0"
       );
-      logger.info("session initialized");
+      (window as any).logger.info("session initialized");
     }
   }
   render() {

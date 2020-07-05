@@ -2,11 +2,14 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "~/*": ["./*"],
-      "@utils/*": ["src/utils/*"],
-      "@component/*": ["src/component/*"],
-      "@stores/*": ["src/stores/*"],
-      "@locales": ["src/locales"]
+      "@/*": ["./*"]
     }
+    // "baseUrl": "./",
+    // "paths": {
+    //   "~/*": ["src/*"],
+    //   "@utils/*": ["src/utils/*"],
+    //   "@component/*": ["src/component/*"],
+    //   "@stores/*": ["src/stores/*"]
+    // }
   }
 }

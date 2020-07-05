@@ -2,7 +2,7 @@ import React, { FC, ChangeEvent, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import TextField from "@material-ui/core/TextField";
 import { observer } from "mobx-react-lite";
-import { useStore } from "@stores";
+import { useStore } from "@/stores";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,7 +39,7 @@ const Properties = observer(() => {
         <TextField
           id="standard-read-only-input"
           label="Name"
-          defaultValue={docInfo.info.object_name}
+          defaultValue={(docInfo.info as any).object_name}
           InputProps={{
             readOnly: true,
           }}
