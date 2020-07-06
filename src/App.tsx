@@ -14,6 +14,14 @@ import helper from "./utils/helper";
 import log4js from "log4js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import intl from "react-intl-universal";
+
+require("intl/locale-data/jsonp/en.js");
+
+const locales = {
+  "en-US": require("@/locales/en.json"),
+  "ko-KR": require("@/locales/ko.json"),
+};
 
 var logger = log4js.getLogger();
 
@@ -37,8 +45,8 @@ interface IStyle {
   width: number;
 }
 
-export default class App extends React.Component {
-  state = { value: 0 };
+class App extends React.Component {
+  state = { value: 0, initDone: false };
 
   handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     this.setState({ value: newValue });
@@ -58,35 +66,54 @@ export default class App extends React.Component {
       logger.info("session initialized");
     }
   }
+  componentDidMount() {
+    this.loadLocales();
+  }
+  loadLocales() {
+    // init method will load CLDR locale data according to currentLocale
+    // react-intl-universal is singleton, so you should init it only once in your app
+    intl
+      .init({
+        currentLocale: "ko-KR", // TODO: determine locale here
+        locales,
+      })
+      .then(() => {
+        // After loading CLDR locale data, start to render
+        this.setState({ initDone: true });
+      });
+  }
   render() {
     const { value } = this.state;
-    return (
-      // <Provider {...stores}>
-      <BrowserRouter>
-        <div>
-          <AppBar position="static" color="default">
-            <Tabs
-              value={value}
-              onChange={this.handleChange}
-              aria-label="simple tabs example"
-            >
-              <Tab
-                value={0}
-                label="Properties"
-                component={Link}
-                to="/properties"
-              />
-              <Tab value={1} label="Item Two" component={Link} to="/two" />
-            </Tabs>
-          </AppBar>
 
-          <Switch>
-            <Route path="/properties" component={PageShell(PropertiesItem)} />
-            {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
-          </Switch>
-        </div>
-        <ToastContainer autoClose={5000} closeOnClick position="top-center" />
-      </BrowserRouter>
+    return (
+      this.state.initDone && (
+        // <Provider {...stores}>
+        <BrowserRouter>
+          <div>
+            <AppBar position="static" color="default">
+              <Tabs
+                value={value}
+                onChange={this.handleChange}
+                aria-label="simple tabs example"
+              >
+                <Tab
+                  value={0}
+                  label={intl.get("label.properties")}
+                  component={Link}
+                  to="/properties"
+                />
+                <Tab value={1} label="Item Two" component={Link} to="/two" />
+              </Tabs>
+            </AppBar>
+
+            <Switch>
+              <Route path="/properties" component={PageShell(PropertiesItem)} />
+              {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
+            </Switch>
+          </div>
+          <ToastContainer autoClose={5000} closeOnClick position="top-center" />
+        </BrowserRouter>
+      )
       // </Provider>
     );
   }
@@ -161,4 +188,4 @@ const PageShell = (Page: FunctionComponent) => {
   );
 };
 
-// export default withStyles(styles, { withTheme: true })(FullWidthTabs);
+export default App;

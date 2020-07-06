@@ -5,6 +5,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "@/stores";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { ToastContainer, toast } from "react-toastify";
+import intl from "react-intl-universal";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
