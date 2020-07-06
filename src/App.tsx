@@ -12,6 +12,8 @@ import { Provider } from "mobx-react";
 import { store } from "./stores";
 import helper from "./utils/helper";
 import log4js from "log4js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 var logger = log4js.getLogger();
 
@@ -83,6 +85,7 @@ export default class App extends React.Component {
             {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
           </Switch>
         </div>
+        <ToastContainer autoClose={5000} closeOnClick position="top-center" />
       </BrowserRouter>
       // </Provider>
     );

@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import { observer } from "mobx-react-lite";
 import { useStore } from "@/stores";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { ToastContainer, toast } from "react-toastify";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,7 +24,9 @@ const Properties = observer(() => {
 
   // called one time, when mount
   useEffect(() => {
-    docInfo.getDocInfo("20200605175750te");
+    docInfo.getDocInfo("20200605175750te").catch((e) => {
+      toast.error("An error occurred");
+    });
   }, []);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
