@@ -11,6 +11,9 @@ import Properties from "./component/xedm-properties";
 import { Provider } from "mobx-react";
 import { store } from "./stores";
 import helper from "./utils/helper";
+import log4js from "log4js";
+
+var logger = log4js.getLogger();
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,7 +53,7 @@ export default class App extends React.Component {
       await store.session.setAuth(
         "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhODI2ODE3YWRkOWQ0MGE2YmFlNWYxY2IxOTg3OWQ4MCIsImlhdCI6MTU5Mzc0MDUwNiwic3ViIjoiIiwiaXNzIjoiMzc0MDI5IiwiZXhwIjoxNTkzNzQ3NzA2fQ.NAcPHaFW9_ujUX-WYaiGqlGrIjmlHtRVluq_OMl2cc0"
       );
-      (window as any).logger.info("session initialized");
+      logger.info("session initialized");
     }
   }
   render() {

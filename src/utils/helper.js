@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const helper = {
   initLog: (devMode = true) => {
     const log4js = require("log4js");
@@ -71,6 +73,90 @@ const helper = {
     }
 
     return false;
+  },
+  isDev: () => {
+    return process.env.NODE_ENV !== "production";
+  },
+  get: (url, params = "", withNoty = false) => {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(url, { params: params })
+        .then((response) => {
+          if (response.data.errcode && response.data.errcode != "0") {
+            // -100 is expired session
+            if (response.data.errcode == -100) {
+              reject(response.data);
+              return;
+            }
+            // if (withNoty) vue.$showError("" + response.data.errmsg);
+            reject(response.data);
+            return;
+          }
+          resolve(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+          if (error.response && error.response.status == 401) {
+            // toLogin();
+            return;
+          }
+          if (error.response && error.response.data) {
+            // if (withNoty && error.response.data.errmsg)
+            //   vue.$showError("" + error.response.data.errmsg);
+            reject(error.response.data);
+          }
+        });
+    });
+  },
+  postUrl: (url, content = "", withNoty = false) => {
+    return helper.post(
+      url,
+      content,
+      "application/x-www-form-urlencoded; charset=UTF-8",
+      withNoty
+    );
+  },
+  post: (
+    url,
+    content = "",
+    contentType = "application/json",
+    withNoty = false
+  ) => {
+    return new Promise((resolve, reject) => {
+      axios
+        .post(url, content, { headers: { "Content-Type": contentType } })
+        .then((response) => {
+          if (response.data.errcode && response.data.errcode != "0") {
+            // -100 is expired session
+            if (response.data.errcode == -100) {
+              reject(response.data);
+              return;
+            }
+            // if (withNoty)
+            //   vue.$showError('' + response.data.errmsg)
+            reject(response.data);
+            return;
+          }
+          resolve(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+          if (error.response.status == 401) {
+            reject("" + error.response.data);
+            return;
+          }
+          if (error.response.data) {
+            // if (withNoty)
+            //   vue.$showError(error.response.data)
+            reject("" + error.response.data);
+          }
+        });
+    });
+  },
+  param: (obj) => {
+    return Object.keys(obj)
+      .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(obj[k]))
+      .join("&");
   },
 };
 
