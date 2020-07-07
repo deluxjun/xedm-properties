@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -15,6 +14,7 @@ import log4js from "log4js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import intl from "react-intl-universal";
+import initWebSocket from "@/service/wsserver";
 
 require("intl/locale-data/jsonp/en.js");
 
@@ -44,7 +44,7 @@ interface IStyle {
   backgroundColor: string;
   width: number;
 }
-
+// const { wss } = require("@/service/wsserver");
 class App extends React.Component {
   state = { value: 0, initDone: false };
 
@@ -55,6 +55,7 @@ class App extends React.Component {
   async componentWillMount() {
     if (window.navigator.onLine) {
       // TODO: init websocket server
+      initWebSocket();
       // TODO: hide window
       // init log
       helper.initLog(process.env.NODE_ENV !== "production");
@@ -182,7 +183,6 @@ function ItemTwo() {
 const PageShell = (Page: FunctionComponent) => {
   return (props: any) => (
     <div className="page">
-      {console.log(props)}
       <Page {...props} />
     </div>
   );

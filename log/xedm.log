@@ -1,104 +1,65 @@
-[2020-07-06T10:51:20.964] [INFO] default - log4js has been initialized
-[2020-07-06T10:51:21.056] [INFO] default - session initialized
-[2020-07-06T11:54:59.412] [INFO] default - log4js has been initialized
-[2020-07-06T11:54:59.419] [INFO] default - login.. because of DEV mode
-[2020-07-06T11:54:59.578] [INFO] default - session initialized
-[2020-07-06T11:59:50.737] [INFO] default - log4js has been initialized
-[2020-07-06T11:59:50.741] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T11:59:50.836] [INFO] default - session initialized
-[2020-07-06T11:59:50.919] [INFO] default - logged in!
-[2020-07-06T16:01:47.587] [INFO] default - log4js has been initialized
-[2020-07-06T16:01:47.593] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:01:47.649] [INFO] default - session initialized
-[2020-07-06T16:01:47.790] [INFO] default - logged in!
-[2020-07-06T16:03:59.114] [INFO] default - log4js has been initialized
-[2020-07-06T16:03:59.117] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:03:59.158] [INFO] default - session initialized
-[2020-07-06T16:03:59.259] [INFO] default - logged in!
-[2020-07-06T16:04:29.684] [INFO] default - log4js has been initialized
-[2020-07-06T16:04:29.685] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:04:29.719] [INFO] default - session initialized
-[2020-07-06T16:04:29.862] [INFO] default - logged in!
-[2020-07-06T16:35:44.718] [INFO] default - log4js has been initialized
-[2020-07-06T16:35:44.720] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:35:44.768] [INFO] default - session initialized
-[2020-07-06T16:35:45.012] [INFO] default - logged in!
-[2020-07-06T16:42:17.410] [INFO] default - log4js has been initialized
-[2020-07-06T16:42:17.413] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:42:17.462] [INFO] default - session initialized
-[2020-07-06T16:42:18.912] [INFO] default - logged in!
-[2020-07-06T16:54:08.125] [INFO] default - log4js has been initialized
-[2020-07-06T16:54:08.128] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:54:08.183] [INFO] default - session initialized
-[2020-07-06T16:54:08.545] [INFO] default - logged in!
-[2020-07-06T16:57:43.133] [INFO] default - log4js has been initialized
-[2020-07-06T16:57:43.135] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:57:43.194] [INFO] default - session initialized
-[2020-07-06T16:57:43.396] [INFO] default - logged in!
-[2020-07-06T16:58:42.989] [INFO] default - log4js has been initialized
-[2020-07-06T16:58:42.992] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:58:43.094] [INFO] default - session initialized
-[2020-07-06T16:58:55.270] [INFO] default - log4js has been initialized
-[2020-07-06T16:58:55.272] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T16:58:55.320] [INFO] default - session initialized
-[2020-07-06T16:58:55.462] [INFO] default - logged in!
-[2020-07-06T17:27:15.924] [INFO] default - log4js has been initialized
-[2020-07-06T17:27:15.926] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T17:27:16.028] [INFO] default - session initialized
-[2020-07-06T17:27:16.169] [INFO] default - logged in!
-[2020-07-06T17:27:56.145] [INFO] default - log4js has been initialized
-[2020-07-06T17:27:56.149] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T17:27:56.249] [INFO] default - session initialized
-[2020-07-06T17:27:56.309] [INFO] default - logged in!
-[2020-07-06T17:31:12.955] [INFO] default - log4js has been initialized
-[2020-07-06T17:31:12.959] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T17:31:13.069] [INFO] default - session initialized
-[2020-07-06T17:31:13.159] [INFO] default - logged in!
-[2020-07-06T17:36:01.922] [INFO] default - log4js has been initialized
-[2020-07-06T17:36:01.926] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T17:36:02.027] [INFO] default - session initialized
-[2020-07-06T17:36:07.095] [INFO] default - logged in!
-[2020-07-06T17:40:05.603] [INFO] default - log4js has been initialized
-[2020-07-06T17:40:05.613] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T17:40:05.756] [INFO] default - session initialized
-[2020-07-06T17:40:05.824] [INFO] default - logged in!
-[2020-07-06T20:55:33.486] [INFO] default - log4js has been initialized
-[2020-07-06T20:55:33.489] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:55:33.547] [INFO] default - session initialized
-[2020-07-06T20:55:33.609] [INFO] default - logged in!
-[2020-07-06T20:55:40.294] [INFO] default - log4js has been initialized
-[2020-07-06T20:55:40.297] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:55:40.399] [INFO] default - session initialized
-[2020-07-06T20:55:40.447] [INFO] default - logged in!
-[2020-07-06T20:57:24.196] [INFO] default - log4js has been initialized
-[2020-07-06T20:57:24.200] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:57:24.299] [INFO] default - session initialized
-[2020-07-06T20:57:24.345] [INFO] default - logged in!
-[2020-07-06T20:57:28.048] [INFO] default - log4js has been initialized
-[2020-07-06T20:57:28.052] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:57:28.156] [INFO] default - session initialized
-[2020-07-06T20:57:28.210] [INFO] default - logged in!
-[2020-07-06T20:57:41.896] [INFO] default - log4js has been initialized
-[2020-07-06T20:57:41.901] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:57:42.009] [INFO] default - session initialized
-[2020-07-06T20:57:42.077] [INFO] default - logged in!
-[2020-07-06T20:57:58.568] [INFO] default - log4js has been initialized
-[2020-07-06T20:57:58.571] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:57:58.667] [INFO] default - session initialized
-[2020-07-06T20:57:58.719] [INFO] default - logged in!
-[2020-07-06T20:58:48.463] [INFO] default - log4js has been initialized
-[2020-07-06T20:58:48.468] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:58:48.565] [INFO] default - session initialized
-[2020-07-06T20:58:48.611] [INFO] default - logged in!
-[2020-07-06T20:58:52.162] [INFO] default - log4js has been initialized
-[2020-07-06T20:58:52.166] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:58:52.269] [INFO] default - session initialized
-[2020-07-06T20:58:52.320] [INFO] default - logged in!
-[2020-07-06T20:59:01.148] [INFO] default - log4js has been initialized
-[2020-07-06T20:59:01.151] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T20:59:01.262] [INFO] default - session initialized
-[2020-07-06T20:59:01.308] [INFO] default - logged in!
-[2020-07-06T21:01:18.537] [INFO] default - log4js has been initialized
-[2020-07-06T21:01:18.541] [INFO] default - trying login.. because of DEV mode
-[2020-07-06T21:01:18.645] [INFO] default - session initialized
-[2020-07-06T21:01:18.700] [INFO] default - logged in!
+[2020-07-07T13:27:58.207] [INFO] default - log4js has been initialized
+[2020-07-07T13:27:58.210] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T13:27:58.261] [INFO] default - session initialized
+[2020-07-07T13:27:58.433] [INFO] default - logged in!
+[2020-07-07T13:32:10.905] [INFO] default - log4js has been initialized
+[2020-07-07T13:32:10.910] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T13:32:11.009] [INFO] default - session initialized
+[2020-07-07T13:32:11.050] [INFO] default - logged in!
+[2020-07-07T13:32:45.936] [INFO] default - log4js has been initialized
+[2020-07-07T13:32:45.940] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T13:32:46.047] [INFO] default - session initialized
+[2020-07-07T13:32:46.103] [INFO] default - logged in!
+[2020-07-07T17:43:00.958] [INFO] default - log4js has been initialized
+[2020-07-07T17:43:00.962] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:43:01.022] [INFO] default - session initialized
+[2020-07-07T17:43:01.059] [INFO] default - logged in!
+[2020-07-07T17:50:11.560] [INFO] default - log4js has been initialized
+[2020-07-07T17:50:11.563] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:50:11.628] [INFO] default - session initialized
+[2020-07-07T17:50:11.676] [INFO] default - logged in!
+[2020-07-07T17:50:23.238] [INFO] default - log4js has been initialized
+[2020-07-07T17:50:23.242] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:50:23.303] [INFO] default - session initialized
+[2020-07-07T17:50:23.344] [INFO] default - logged in!
+[2020-07-07T17:57:37.762] [INFO] default - log4js has been initialized
+[2020-07-07T17:57:37.768] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:57:37.822] [INFO] default - session initialized
+[2020-07-07T17:57:37.859] [INFO] default - logged in!
+[2020-07-07T17:57:57.319] [INFO] default - log4js has been initialized
+[2020-07-07T17:57:57.325] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:57:57.381] [INFO] default - session initialized
+[2020-07-07T17:57:57.420] [INFO] default - logged in!
+[2020-07-07T17:58:23.031] [INFO] default - log4js has been initialized
+[2020-07-07T17:58:23.034] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:58:23.090] [INFO] default - session initialized
+[2020-07-07T17:58:23.126] [INFO] default - logged in!
+[2020-07-07T17:58:40.204] [INFO] default - log4js has been initialized
+[2020-07-07T17:58:40.207] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T17:58:40.261] [INFO] default - session initialized
+[2020-07-07T17:58:40.297] [INFO] default - logged in!
+[2020-07-07T18:01:11.449] [INFO] default - log4js has been initialized
+[2020-07-07T18:01:11.454] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T18:01:11.513] [INFO] default - session initialized
+[2020-07-07T18:01:11.556] [INFO] default - logged in!
+[2020-07-07T18:01:50.222] [INFO] default - log4js has been initialized
+[2020-07-07T18:01:50.225] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T18:01:50.280] [INFO] default - session initialized
+[2020-07-07T18:01:50.317] [INFO] default - logged in!
+[2020-07-07T18:03:33.614] [INFO] default - log4js has been initialized
+[2020-07-07T18:03:33.616] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T18:03:33.668] [INFO] default - session initialized
+[2020-07-07T18:03:33.670] [INFO] default - Tue Jul 07 2020 18:03:33 GMT+0900 (대한민국 표준시) Server is listening on port 21022
+[2020-07-07T18:03:33.829] [INFO] default - logged in!
+[2020-07-07T18:16:37.900] [INFO] default - log4js has been initialized
+[2020-07-07T18:16:37.904] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T18:16:37.958] [INFO] default - session initialized
+[2020-07-07T18:16:37.960] [INFO] default -  Server is listening on port 21022
+[2020-07-07T18:16:38.005] [INFO] default - logged in!
+[2020-07-07T18:17:27.202] [INFO] default -  Connection accepted.
+[2020-07-07T18:17:38.240] [INFO] default - Received Message: Rock it with HTML5 WebSocket
+[2020-07-07T18:18:53.742] [INFO] default - log4js has been initialized
+[2020-07-07T18:18:53.747] [INFO] default - trying login.. because of DEV mode
+[2020-07-07T18:18:53.827] [INFO] default - session initialized
+[2020-07-07T18:18:53.829] [INFO] default -  Server is listening on port 21022
+[2020-07-07T18:18:53.874] [INFO] default - logged in!
