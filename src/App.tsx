@@ -6,15 +6,16 @@ import Tab from "@material-ui/core/Tab";
 import { Paper } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
-import Properties from "./component/xedm-properties";
 import { Provider } from "mobx-react";
-import { store } from "./stores";
+import { stores } from "./stores";
 import helper from "./utils/helper";
 import log4js from "log4js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import intl from "react-intl-universal";
 import initWebSocket from "@/service/wsserver";
+import Properties from "./component/xedm-properties";
+import History from "./pages/History";
 
 require("intl/locale-data/jsonp/en.js");
 
@@ -60,8 +61,8 @@ class App extends React.Component {
       // init log
       helper.initLog(process.env.NODE_ENV !== "production");
       // check session and init
-      await store.session.init();
-      await store.session.setAuth(
+      await stores.session.init();
+      await stores.session.setAuth(
         "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhODI2ODE3YWRkOWQ0MGE2YmFlNWYxY2IxOTg3OWQ4MCIsImlhdCI6MTU5Mzc0MDUwNiwic3ViIjoiIiwiaXNzIjoiMzc0MDI5IiwiZXhwIjoxNTkzNzQ3NzA2fQ.NAcPHaFW9_ujUX-WYaiGqlGrIjmlHtRVluq_OMl2cc0"
       );
       logger.info("session initialized");
@@ -103,13 +104,18 @@ class App extends React.Component {
                   component={Link}
                   to="/properties"
                 />
-                <Tab value={1} label="Item Two" component={Link} to="/two" />
+                <Tab
+                  value={1}
+                  label={intl.get("label.properties")}
+                  component={Link}
+                  to="/history"
+                />
               </Tabs>
             </AppBar>
 
             <Switch>
               <Route path="/properties" component={PageShell(PropertiesItem)} />
-              {/* <Route path="/two" component={PageShell(ItemTwo)} /> */}
+              <Route path="/history" component={PageShell(HistoryItem)} />
             </Switch>
           </div>
           <ToastContainer autoClose={5000} closeOnClick position="top-center" />
@@ -172,10 +178,10 @@ function PropertiesItem() {
   );
 }
 
-function ItemTwo() {
+function HistoryItem() {
   return (
     <Paper>
-      <div>Item two</div>
+      <History />
     </Paper>
   );
 }

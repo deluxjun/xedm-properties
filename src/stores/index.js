@@ -11,11 +11,13 @@ import DocInfo from "./docInfo";
 //   session: Session;
 //   docinfo: DocInfo;
 // }
-export const store = {
+export const stores = {
   session: new Session(),
   docInfo: new DocInfo(),
 };
-export const StoreContext = createContext(store);
+export const StoreContext = createContext(stores);
 export const useStore = () => {
   return useContext(StoreContext);
 };
+
+export default stores;

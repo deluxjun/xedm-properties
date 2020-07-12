@@ -33,7 +33,6 @@
     "log4js": "^6.3.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
-    "mobx-react-lite": "^2.0.7",
     "react": "^16.13.1",
     "react-alert-template-mui": "^1.0.4",
     "react-app-rewired": "^2.1.6",

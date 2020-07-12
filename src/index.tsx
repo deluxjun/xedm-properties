@@ -4,10 +4,12 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 
-import { store, StoreContext } from "./stores";
+import { stores, StoreContext } from "./stores";
+
+import "@progress/kendo-theme-material/dist/all.css";
 
 ReactDOM.render(
-  <StoreContext.Provider value={store}>
+  <StoreContext.Provider value={stores}>
     <App />
   </StoreContext.Provider>,
   document.getElementById("root")

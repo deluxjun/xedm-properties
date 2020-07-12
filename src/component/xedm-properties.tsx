@@ -1,7 +1,7 @@
 import React, { FC, ChangeEvent, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import TextField from "@material-ui/core/TextField";
-import { observer } from "mobx-react-lite";
+import { observer } from "mobx-react";
 import { useStore } from "@/stores";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { ToastContainer, toast } from "react-toastify";
@@ -25,7 +25,7 @@ const Properties = observer(() => {
 
   // called one time, when mount
   useEffect(() => {
-    docInfo.getDocInfo("20200605175750te").catch((e) => {
+    docInfo.getDocInfo().catch((e) => {
       toast.error("An error occurred");
     });
   }, []);
