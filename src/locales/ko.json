@@ -1,3 +1,9 @@
 {
-  "label.properties": "속성"
+  "label.properties": "속성",
+  "label.history": "이력",
+  "label.Modifier": "수정자",
+  "label.Modified": "수정한 날짜",
+  "label.Creator": "생성자",
+  "label.Created": "생성한 날짜",
+  "label.FileName": "파일명"
 }

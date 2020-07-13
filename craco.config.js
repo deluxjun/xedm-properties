@@ -16,8 +16,23 @@ module.exports = {
   //   },
   // ],
   webpack: {
-    configure: {
-      target: "electron-renderer",
+    // configure: {
+    //   target: "electron-renderer",
+    // },
+    configure: (webpackConfig) => {
+      webpackConfig.module.rules.push({
+        test: /\.ya?ml$/,
+        type: "javascript/auto", // Required by Webpack v4
+        use: "yaml-loader",
+      });
+      webpackConfig.module.rules.push({
+        test: /.json$/i,
+        loader: "json-loader",
+        type: "javascript/auto",
+      });
+      webpackConfig.node.fs = "empty";
+      webpackConfig.target = "electron-renderer";
+      return webpackConfig;
     },
     alias: {
       "@": path.resolve(__dirname, "src/"),

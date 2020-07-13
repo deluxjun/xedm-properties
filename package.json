@@ -20,6 +20,8 @@
     "@progress/kendo-react-grid": "^3.14.0",
     "@progress/kendo-react-inputs": "^3.14.0",
     "@progress/kendo-react-intl": "^3.14.0",
+    "@progress/kendo-react-layout": "^3.15.0",
+    "@progress/kendo-react-progressbars": "^3.15.0",
     "@progress/kendo-theme-material": "^3.16.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -30,6 +32,8 @@
     "electron-is-dev": "^1.2.0",
     "electron-json-storage": "^4.1.8",
     "http-proxy-middleware": "^1.0.4",
+    "js-yaml": "^3.14.0",
+    "json-loader": "^0.5.7",
     "log4js": "^6.3.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
@@ -43,6 +47,8 @@
     "react-toastify": "^6.0.8",
     "typescript": "~3.7.2",
     "websocket": "^1.0.31",
+    "yaml-loader": "^0.6.0",
+    "yamljs": "^0.3.0",
     "yarn": "^1.22.4"
   },
   "scripts": {
